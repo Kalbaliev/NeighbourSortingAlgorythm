@@ -33,9 +33,17 @@ class SortingAlgorythm:
                 if i+1!=n*m-1:
                     arr.insert(i+1,arr[n*m-1])
                     arr.pop()   
+
                 else:
                     arr.insert(0,arr[n*m-1])
                     arr.pop()
+                    if self.m==2:
+                        for i in range(0, len(arr), 4):
+                            temp = arr[i]
+                            arr[i]=arr[i+1]
+                            arr[i+1]=temp  
+    
+
         return arr
 
 
