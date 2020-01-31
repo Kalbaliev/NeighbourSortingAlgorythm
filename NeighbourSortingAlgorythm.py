@@ -39,9 +39,7 @@ class SortingAlgorythm:
                     arr.pop()
                     if self.m==2:
                         for i in range(0, len(arr), 4):
-                            temp = arr[i]
-                            arr[i]=arr[i+1]
-                            arr[i+1]=temp  
+                          arr[i],arr[i+1]=arr[i+1],arr[i]
     
 
         return arr
